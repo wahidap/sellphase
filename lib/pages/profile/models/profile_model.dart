@@ -1,1 +1,0 @@
-export 'view/profile_model.dart';

@@ -1,8 +1,6 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
-import 'package:sellphase/home/product/view/product_details.dart';
-import 'package:sellphase/products/product_card/view/product_card.dart';
+import 'package:get/get.dart';
+import 'package:sellphase/products/product/view/productscreen.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -50,69 +48,121 @@ class _HomePageState extends State<HomePage>
                   Container(
                     width: 180,
                     height: 200,
-                    color: Color.fromRGBO(7, 57, 109, 100),
                     child: TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          "Products",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 30),
-                        )),
+                      onPressed: () {
+                        // Navigate to the product screen
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) {
+                            return ProductScreen();
+                          },
+                        ));
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons
+                                .medical_services_rounded, // Replace with the desired icon
+                            size: 30,
+                          ),
+                          SizedBox(
+                              width:
+                                  8), // Add some space between the icon and the text
+                          Text(
+                            'Products',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 30,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                   Container(
                     width: 180,
                     height: 200,
-                    color: Color.fromRGBO(7, 57, 109, 100),
+                    color: Color.fromRGBO(
+                        7, 57, 109, 1.0), // Make sure the opacity is set to 1.0
                     child: TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          "purchase",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 30),
-                        )),
-                  ),
+                      onPressed: () {},
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment
+                            .center, // Center the contents horizontally
+                        children: [
+                          Icon(
+                            Icons
+                                .shopping_cart, // Replace with the desired icon
+                            size: 30, // Adjust the size as needed
+                          ),
+                          SizedBox(
+                              width:
+                                  8), // Add some space between the icon and the text
+                          Text(
+                            'Purchase',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 30,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  )
                 ],
-              ),
-              SizedBox(
-                height: 20,
               ),
               Row(
                 children: [
                   Container(
                     width: 180,
                     height: 200,
-                    color: Color.fromRGBO(7, 57, 109, 100),
+                    color: Color.fromRGBO(7, 57, 109, 1.0),
                     child: TextButton(
                         onPressed: () {},
-                        child: Text(
-                          "Add product",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 30),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(Icons.add_outlined),
+                            // SizedBox(width: 4,),
+
+                            Text(
+                              "Add products",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 28),
+                            ),
+                          ],
                         )),
                   ),
                   Container(
                     width: 180,
                     height: 200,
-                    color: Color.fromRGBO(7, 57, 109, 100),
+                    // color: Color.fromRGBO(7, 57, 109, 100),
                     child: TextButton(
                         onPressed: () {},
-                        child: Text(
-                          "Stock",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 30),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(Icons.shelves),
+                            SizedBox(width: 8),
+                            Text(
+                              "Stock",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 30),
+                            ),
+                          ],
                         )),
                   ),
                 ],
               ),
-              SizedBox(
-                height: 20,
-              ),
+              // SizedBox(
+              //   height: 20,
+              // ),
               // Row(
               //   children: [
               //     Container(
               //       width: 180,
               //       height: 200,
-              //       color: Color.fromRGBO(7, 57, 109, 100),
+              //       // color: Color.fromRGBO(7, 57, 109, 100),
               //       child: Text("card 3"),
               //     ),
               //     Container(

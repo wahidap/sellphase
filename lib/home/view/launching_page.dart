@@ -4,6 +4,7 @@ import 'package:sellphase/pages/order/orderpage/view/order_page.dart';
 
 
 
+
 class LaunchPage extends StatefulWidget {
   const LaunchPage({super.key});
 
@@ -57,7 +58,7 @@ void initState() {
           controller: _tabController,
           children: [
           HomePage(),
-           OrderPage(),
+           OrderPage()
           
          
         ]),
